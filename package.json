@@ -1,29 +1,22 @@
 {
   "name": "mcp-test-repo",
   "version": "1.0.0",
-  "description": "用于测试 fe-testgen-mcp 的仓库",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "private": true,
+  "description": "用于测试 fe-testgen-mcp 的 monorepo 仓库",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "test": "vitest",
-    "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "dev:vue": "pnpm --filter @mcp-test/vue-app dev",
+    "dev:react": "pnpm --filter @mcp-test/react-app dev",
+    "test": "pnpm -r test:run",
+    "test:vue": "pnpm --filter @mcp-test/vue-app test:run",
+    "test:react": "pnpm --filter @mcp-test/react-app test:run",
+    "build": "pnpm -r build"
   },
   "keywords": [
     "mcp",
     "test",
-    "vitest"
+    "monorepo"
   ],
   "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^20.10.0",
-    "typescript": "^5.3.2",
-    "vite": "^5.0.0",
-    "vitest": "^1.0.0"
-  }
+  "license": "MIT"
 }
 
