@@ -1,0 +1,29 @@
+{
+  "name": "mcp-test-repo",
+  "version": "1.0.0",
+  "description": "用于测试 fe-testgen-mcp 的仓库",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "mcp",
+    "test",
+    "vitest"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
+
